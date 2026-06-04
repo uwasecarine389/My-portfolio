@@ -1,234 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uwase Carine | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uwase Carine | Portfolio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
+
 <body>
 
-    <!-- NAVBAR -->
-    <header>
-        <nav>
-            <h2 class="logo">Uwase Carine</h2>
+<!-- NAVBAR -->
+<header>
+<nav>
 
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<h2 class="logo">Uwase Carine</h2>
 
-    <!-- HOME -->
-    <section id="home" class="hero">
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 
-        <div class="hero-image">
-            <img src="profile.jpg" alt="Uwase Carine">
-        </div>
+<div class="controls">
+<select id="languageSelect">
+<option value="en">EN</option>
+<option value="rw">RW</option>
+</select>
 
-        <div class="hero-content">
-            <h1>Hello, I'm <span>Uwase Carine</span></h1>
+<button id="themeToggle">🌙</button>
+</div>
 
-            <h2>Beginner Software Developer</h2>
+</nav>
+</header>
 
-            <p>
-                Passionate about Web Development, Graphic Design,
-                HTML, CSS, and JavaScript. I enjoy creating modern,
-                responsive, and user-friendly websites while
-                continuously learning new technologies.
-            </p>
+<!-- HERO -->
+<section id="home" class="hero">
 
-            <a href="#projects" class="btn">
-                View My Work
-            </a>
-        </div>
+<div class="hero-image">
+<img src="profile.jpg" alt="Uwase Carine">
+</div>
 
-    </section>
+<div class="hero-content">
+<h1>Hello, I'm <span>Uwase Carine</span></h1>
+<h2>Beginner Software Developer</h2>
+<p>Passionate about web development and building modern responsive websites.</p>
 
-    <!-- ABOUT -->
-    <section id="about">
+<a href="#projects" class="btn">View My Work</a>
+</div>
 
-        <h2 class="section-title">About Me</h2>
+</section>
 
-        <div class="about-content">
+<!-- ABOUT (PREMIUM CARD) -->
+<section id="about">
 
-            <p>
-                My name is <strong>Uwase Carine</strong>, a beginner Software
-                Developer with a passion for creating beautiful and functional
-                websites.
+<h2 class="section-title">About Me</h2>
 
-                I specialize in HTML, CSS, JavaScript, Graphic Design, and
-                Web Development. I enjoy transforming ideas into digital
-                experiences that are both visually appealing and easy to use.
-            </p>
+<div class="about-card">
 
-            <p>
-                My goal is to become a professional Full-Stack Developer and
-                contribute to innovative projects that solve real-world
-                challenges through technology.
-            </p>
+<p>
+Hello! I’m <strong>Uwase Carine</strong>, a Software Development student passionate about building modern web experiences.
+</p>
 
-        </div>
+<p>
+I enjoy learning new technologies and improving my skills through real-world projects and continuous practice.
+</p>
 
-    </section>
+<div class="about-info">
 
-    <!-- SKILLS -->
-    <section id="skills">
+<div class="info-box">
+<i class="fas fa-graduation-cap"></i>
+<h3>Education</h3>
+<p>SOS Technical High School</p>
+</div>
 
-        <h2 class="section-title">My Skills</h2>
+<div class="info-box">
+<i class="fas fa-laptop-code"></i>
+<h3>Training</h3>
+<p>Santech Training Centre</p>
+</div>
 
-        <div class="skills-container">
+<div class="info-box experience" onclick="toggleExperience()">
+<i class="fas fa-code"></i>
+<h3>Experience</h3>
+<p>Click to view</p>
 
-            <div class="skill-card">
-                <h3>HTML5</h3>
-            </div>
+<div id="experienceDetails" class="hidden">
+<p>✔ 1 Year at SOS Technical High School</p>
+<p>✔ Beginner Software Developer</p>
+<p>✔ Hands-on practice in HTML, CSS, JS</p>
+</div>
 
-            <div class="skill-card">
-                <h3>CSS3</h3>
-            </div>
+</div>
 
-            <div class="skill-card">
-                <h3>JavaScript</h3>
-            </div>
+<div class="info-box">
+<i class="fas fa-bullseye"></i>
+<h3>Goal</h3>
+<p>Full-Stack Developer</p>
+</div>
 
-            <div class="skill-card">
-                <h3>Graphic Design</h3>
-            </div>
+</div>
 
-            <div class="skill-card">
-                <h3>Responsive Design</h3>
-            </div>
+</div>
 
-            <div class="skill-card">
-                <h3>Web Development</h3>
-            </div>
+</section>
 
-        </div>
+<!-- SKILLS -->
+<section id="skills">
 
-    </section>
+<h2 class="section-title">My Skills</h2>
 
-    <!-- PROJECTS -->
-    <section id="projects">
+<div class="skills-container">
 
-        <h2 class="section-title">My Projects</h2>
+<div class="skill-card"><i class="fab fa-html5"></i><h3>HTML5</h3></div>
+<div class="skill-card"><i class="fab fa-css3-alt"></i><h3>CSS3</h3></div>
+<div class="skill-card"><i class="fab fa-js"></i><h3>JavaScript</h3></div>
+<div class="skill-card"><i class="fab fa-github"></i><h3>GitHub</h3></div>
 
-        <div class="project-grid">
+</div>
 
-            <div class="project-card">
-                <h3>Tembera Rwanda</h3>
+</section>
 
-                <p>
-                    Tourism website showcasing Rwanda's attractions,
-                    culture, and beautiful destinations.
-                </p>
+<!-- PROJECTS -->
+<section id="projects">
 
-                <a href="https://github.com/uwasecarine389/Temberarwanda"
-                    target="_blank">
-                    View Project
-                </a>
-            </div>
+<h2 class="section-title">My Projects</h2>
 
-            <div class="project-card">
-                <h3>Beta Project</h3>
+<div class="project-grid">
 
-                <p>
-                    Modern web project demonstrating responsive design
-                    and interactive user experiences.
-                </p>
+<div class="project-card">
+<h3>Tembera Rwanda</h3>
+<p>Tourism website showcasing Rwanda attractions.</p>
 
-                <a href="https://github.com/uwasecarine389/beta-project"
-                    target="_blank">
-                    View Project
-                </a>
-            </div>
+<div class="project-buttons">
+<a href="https://github.com/uwasecarine389/Temberarwanda">View Code</a>
+<a href="https://temberarwanda-phi.vercel.app/" target="_blank" class="live-btn">View Live</a>
+</div>
+</div>
 
-            <div class="project-card">
-                <h3>Java Project</h3>
+<div class="project-card">
+<h3>Beta Project</h3>
+<p>Responsive web application.</p>
+<a href="https://github.com/uwasecarine389/Beta-Project" target="_blank">View Code</a>
+</div>
 
-                <p>
-                    Java application showcasing object-oriented
-                    programming concepts and problem-solving skills.
-                </p>
+<div class="project-card">
+<h3>Java Project</h3>
+<p>Object-oriented Java project.</p>
+<a href="https://github.com/uwasecarine389/Java-Project" target="_blank">View Code</a>
+</div>
 
-                <a href="https://github.com/uwasecarine389/java-project"
-                    target="_blank">
-                    View Project
-                </a>
-            </div>
+</div>
 
-        </div>
+</section>
 
-    </section>
+<!-- CONTACT -->
+<section id="contact">
 
-    <!-- CONTACT -->
-    <section id="contact">
+<h2 class="section-title">Contact Me</h2>
 
-        <h2 class="section-title">Contact Me</h2>
+<div class="contact-container">
 
-        <div class="contact-container">
+<div class="contact-info">
 
-            <div class="contact-info">
+<h3>Let’s Connect</h3>
 
-                <h3>Let's Connect</h3>
+<p>📧 <a href="mailto:ucarine096@gmail.com">ucarine096@gmail.com</a></p>
+<p>📞 <a href="tel:0784678138">0784678138</a></p>
 
-                <p>
-                    Feel free to contact me for collaborations,
-                    projects, or opportunities.
-                </p>
+<p>💻 GitHub:
+<a href="https://github.com/uwasecarine389" target="_blank">uwasecarine389</a>
+</p>
 
-                <p><strong>Email:</strong> ucarine096@gmail.com</p>
-                <p><strong>Phone:</strong> 0784678138</p>
+<p>📸 Instagram:
+<a href="https://www.instagram.com/en.vraie.carine__/" target="_blank">@en.vraie.carine__
+</a>
+</p>
 
-                <p>
-                    <strong>GitHub:</strong>
-                    <a href="https://github.com/uwasecarine389"
-                       target="_blank">
-                        github.com/uwasecarine389
-                    </a>
-                </p>
+</div>
 
-            </div>
+<form class="contact-form">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea rows="6" placeholder="Your Message"></textarea>
+<button type="submit">Send Message</button>
+</form>
 
-            <form class="contact-form">
+</div>
 
-                <input
-                    type="text"
-                    placeholder="Your Name"
-                    required
-                >
+</section>
 
-                <input
-                    type="email"
-                    placeholder="Your Email"
-                    required
-                >
+<footer>
+<p>© 2026 Uwase Carine | Software Developer</p>
+</footer>
 
-                <textarea
-                    rows="6"
-                    placeholder="Your Message"
-                    required>
-                </textarea>
+<!-- SCRIPT -->
+<script>
+// theme toggle
+const themeBtn = document.getElementById("themeToggle");
 
-                <button type="submit">
-                    Send Message
-                </button>
+themeBtn.addEventListener("click", () => {
+document.body.classList.toggle("light-mode");
+themeBtn.textContent =
+document.body.classList.contains("light-mode") ? "☀️" : "🌙";
+});
 
-            </form>
-
-        </div>
-
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>
-            © 2026 Uwase Carine | Software Developer
-        </p>
-    </footer>
+// experience toggle
+function toggleExperience(){
+const box = document.getElementById("experienceDetails");
+box.style.display = box.style.display === "block" ? "none" : "block";
+}
+</script>
 
 </body>
 </html>
